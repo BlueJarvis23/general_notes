@@ -1,0 +1,73 @@
+wifi-menu -o
+netctl start <profile>
+ping -c 3 www.google.com
+
+Use fdisk to format drive ... Mark one as bootable
+mkfs.ext4 <drive>
+mkswap <drive>
+swapon <drive>
+
+Mount bootable drive to /mnt
+mount /dev/sda1 /mnt
+mkdir /mnt/home
+mount /dev/sda3 /mnt/home
+
+pacman -Sy
+pacman -S reflector
+reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+
+pacstrap -i /mnt base base-devel
+
+genfstab -U -p /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab
+
+arch-chroot /mnt
+
+pacman -S vim
+vim /etc/locale.gen -- uncomment en_US.UTF-8 UTF-8
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+export LANG=en_US.UTF-8
+
+ln -s /usr/share/zoneinfo/America/Denver > /etc/localtime
+hwclock --systohc --utc
+
+Add multilib if desired -- usually no
+vim /etc/pacman.conf
+
+echo patriot > /etc/hostname
+pacman -S iw wpa_supplicant dialog
+
+pacman -S sudo bash-completion
+passwd
+useradd -m -g users -G wheel,storage,power -s /bin/bash dallin
+passwd dallin
+EDITOR=vim visudo -- uncomment %wheel ALL=(ALL) ALL
+
+mkinitcpio -p linux
+pacman -S grub os-prober
+grub-install --target=i386-pc --recheck /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+umount -R /mnt
+reboot
+
+wifi-menu -o
+netctl start <profile>
+netctl enable <profile>
+pacman -S xorg
+pacman -S xterm xorg-xclock xorg-twm xorg-xinit xorg-server-utils
+pacman -S plasma kdebase
+pacman -R plasma-mediacenter
+pacman -S ttf-freefont
+systemctl enable sddm
+
+sudo pacman -Sy bumblebee bbswitch primus intel-dri xf86-video-intel nvidia nvidia-utils firefox blender gimp cgdb mariadb texlive-core git gist htop 
+sudo pacman -Sy community/python-pandas community/python-scipy community/python-texttable 
+
+git config --global user.name 'Dallin Marshall'
+git config --global user.email BlueJarvis23@gmail.com
+git config --global core.editor vim
+
+
