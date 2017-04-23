@@ -36,3 +36,4 @@ if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
     error "This is a test of the error command" "error" 
     fatal "This is a test of the fatal command" "fatal" 
 fi
+
