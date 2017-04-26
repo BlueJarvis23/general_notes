@@ -20,9 +20,6 @@ parse s = map parseMessage sx
 
 
 
---parseMessage n = LogMessage Info 123 "Message"
-
-
 e = parseMessage "E 2 562 help help"
      == LogMessage (Error 2) 562 "help help"
 

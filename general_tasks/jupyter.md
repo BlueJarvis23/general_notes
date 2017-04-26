@@ -1,8 +1,4 @@
-#####################################################################################################################
-#####################################################################################################################
-## Jupyter Notebooks 
-#####################################################################################################################
-#####################################################################################################################
+# Jupyter Notebooks 
 
 The Jupyter Notebook has two different keyboard input modes. Edit mode allows you to type code/text into a cell and is
 indicated by a green cell border. Command mode binds the keyboard to notebook level actions and is indicated by a grey
@@ -11,92 +7,87 @@ cell border with a blue left margin.
 
 ## Command Mode (press Esc to enable)
 
-F             :  find and replace
-Ctrl-Shift-P  :  open the command palette
-Enter         :  enter edit mode
-Shift-Enter   :  run cell, select below
-Ctrl-Enter    :  run selected cells
-Alt-Enter     :  run cell, insert below
-Y             :  to code
-M             :  to markdown
-R             :  to raw
-1             :  to heading 1
-2             :  to heading 2
-3             :  to heading 3
-4             :  to heading 4
-5             :  to heading 5
-6             :  to heading 6
-K             :  select cell above
-Up            :  select cell above
-Down          :  select cell below
-J             :  select cell below
-Shift-K       :  extend selected cells above
-Shift-Up      :  extend selected cells above
-Shift-Down    :  extend selected cells below
-Shift-J       :  extend selected cells below
-A             :  insert cell above
-B             :  insert cell below
-X             :  cut cell
-C             :  copy cell
-Shift-V       :  paste cell above
-V             :  paste cell below
-Z             :  undo cell deletion
-D,D           :  delete selected cell
-Shift-M       :  merge selected cells, or current cell with cell below if only one cell selected
-Ctrl-S        :  Save and Checkpoint
-S             :  Save and Checkpoint
-L             :  toggle line numbers
-O             :  toggle output of selected cells
-Shift-O       :  toggle output scrolling of selected cells
-H             :  show keyboard shortcuts
-I,I           :  interrupt kernel
-0,0           :  restart the kernel (with dialog)
-Esc           :  close the pager
-Q             :  close the pager
-Shift-Space   :  scroll notebook up
-Space         :  scroll notebook down
- 
-
+* F             :  find and replace
+* Ctrl-Shift-P  :  open the command palette
+* Enter         :  enter edit mode
+* Shift-Enter   :  run cell, select below
+* Ctrl-Enter    :  run selected cells
+* Alt-Enter     :  run cell, insert below
+* Y             :  to code
+* M             :  to markdown
+* R             :  to raw
+* 1             :  to heading 1
+* 2             :  to heading 2
+* 3             :  to heading 3
+* 4             :  to heading 4
+* 5             :  to heading 5
+* 6             :  to heading 6
+* K             :  select cell above
+* Up            :  select cell above
+* Down          :  select cell below
+* J             :  select cell below
+* Shift-K       :  extend selected cells above
+* Shift-Up      :  extend selected cells above
+* Shift-Down    :  extend selected cells below
+* Shift-J       :  extend selected cells below
+* A             :  insert cell above
+* B             :  insert cell below
+* X             :  cut cell
+* C             :  copy cell
+* Shift-V       :  paste cell above
+* V             :  paste cell below
+* Z             :  undo cell deletion
+* D,D           :  delete selected cell
+* Shift-M       :  merge selected cells, or current cell with cell below if only one cell selected
+* Ctrl-S        :  Save and Checkpoint
+* S             :  Save and Checkpoint
+* L             :  toggle line numbers
+* O             :  toggle output of selected cells
+* Shift-O       :  toggle output scrolling of selected cells
+* H             :  show keyboard shortcuts
+* I,I           :  interrupt kernel
+* 0,0           :  restart the kernel (with dialog)
+* Esc           :  close the pager
+* Q             :  close the pager
+* Shift-Space   :  scroll notebook up
+* Space         :  scroll notebook down
  
 
 ## Edit Mode (press Enter to enable)
 
-Tab                  :  code completion or indent
-Shift-Tab            :  tooltip
-Ctrl-]               :  indent
-Ctrl-[               :  dedent
-Ctrl-A               :  select all
-Ctrl-Z               :  undo
-Ctrl-Shift-Z         :  redo
-Ctrl-Y               :  redo
-Ctrl-Home            :  go to cell start
-Ctrl-Up              :  go to cell start
-Ctrl-End             :  go to cell end
-Ctrl-Down            :  go to cell end
-Ctrl-Left            :  go one word left
-Ctrl-Right           :  go one word right
-Ctrl-Backspace       :  delete word before
-Ctrl-Delete          :  delete word after
-Ctrl-M               :  command mode
-Ctrl-Shift-P         :  open the command palette
-Esc                  :  command mode
-Shift-Enter          :  run cell, select below
-Ctrl-Enter           :  run selected cells
-Alt-Enter            :  run cell, insert below
-Ctrl-Shift--         :  split cell
-Ctrl-Shift-Subtract  :  split cell
-Ctrl-S               :  Save and Checkpoint
-Down                 :  move cursor down
-Up                   :  move cursor up
+* Tab                  :  code completion or indent
+* Shift-Tab            :  tooltip
+* Ctrl-]               :  indent
+* Ctrl-[               :  dedent
+* Ctrl-A               :  select all
+* Ctrl-Z               :  undo
+* Ctrl-Shift-Z         :  redo
+* Ctrl-Y               :  redo
+* Ctrl-Home            :  go to cell start
+* Ctrl-Up              :  go to cell start
+* Ctrl-End             :  go to cell end
+* Ctrl-Down            :  go to cell end
+* Ctrl-Left            :  go one word left
+* Ctrl-Right           :  go one word right
+* Ctrl-Backspace       :  delete word before
+* Ctrl-Delete          :  delete word after
+* Ctrl-M               :  command mode
+* Ctrl-Shift-P         :  open the command palette
+* Esc                  :  command mode
+* Shift-Enter          :  run cell, select below
+* Ctrl-Enter           :  run selected cells
+* Alt-Enter            :  run cell, insert below
+* Ctrl-Shift--         :  split cell
+* Ctrl-Shift-Subtract  :  split cell
+* Ctrl-S               :  Save and Checkpoint
+* Down                 :  move cursor down
+* Up                   :  move cursor up
 
-
-#####################################################################################################################
-## Markdown  -- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-#####################################################################################################################
+# Markdown  -- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ## Headers
 
-<code>
+```
 # H1
 ## H2
 ### H3
@@ -111,12 +102,12 @@ Alt-H1
 
 Alt-H2
 ------
-</code>
+```
 
 
 ## Emphasis
 
-<code>
+```
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
@@ -124,34 +115,34 @@ Strong emphasis, aka bold, with **asterisks** or __underscores__.
 Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
-</code> 
+``` 
 
 
 ## Lists
 
-<code>
+```
 1. First ordered list item
 2. Another item
-⋅⋅* Unordered sub-list. 
+  * Unordered sub-list. 
 1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
+  1. Ordered sub-list
 4. And another item.
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+   To have a line break without a paragraph, you will need to use two trailing spaces.  
+   Note that this line is separate, but within the same paragraph.  
+   (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
-</code>
+```
 
 
 ## Links
 
-<code>
+```
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -173,14 +164,14 @@ Some text to show that the reference links can follow later.
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
-</code>
+```
 
 
 ## Images
 
 Here's our logo (hover to see the title text):
 
-<code>
+```
 Inline-style: 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
@@ -188,7 +179,7 @@ Reference-style:
 ![alt text][logo]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-</code>
+```
 
 
 ## Code and Syntax Highlighting
@@ -198,14 +189,14 @@ support syntax highlighting. Which languages are supported and how those languag
 Markdown Here supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, 
 and how to write the language names, see the highlight.js demo page.
 
-<code>
+```
 Inline `code` has `back-ticks around` it.
-</code>
+```
 
 Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks -- 
 they're easier and only they support syntax highlighting.
 
-<code>
+```
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
@@ -220,14 +211,14 @@ print s
 No language indicated, so no syntax highlighting. 
 But let's throw in a <b>tag</b>.
 ```
-</code>
+```
 
 
 ## Tables
 Tables aren't part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables 
 to your email -- a task that would otherwise require copy-pasting from another application.
 
-<code>
+```
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
@@ -244,24 +235,24 @@ Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
-</code>
+```
 
 
 ## Block Quotes
 
-<code>
+```
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
 Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
-</code>
+```
 
 
 ## Inline HTML
 
-<code>
+```
 <dl>
   <dt>Definition list</dt>
   <dd>Is something people use sometimes.</dd>
@@ -269,12 +260,12 @@ Quote break.
   <dt>Markdown in HTML</dt>
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
-</code>
+```
 
 
 ## Horizontal Rule
 
-<code>
+```
 Three or more...
 
 ---
@@ -288,7 +279,7 @@ Asterisks
 ___
 
 Underscores
-</code>
+```
 
 
 ## Line Break
@@ -297,27 +288,27 @@ hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to
 
 Here are some things to try out:
 
-<code>
+```
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
-</code>
+```
 
 
 ## Youtube Videos
 They can't be added directly but you can add an image with a link to the video like this:
 
-<code>
+```
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
 " target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-</code>
+```
 
 Or in pure Markdown, but losing the image sizing and border:
 
-<code>
+```
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-</code>
+```
