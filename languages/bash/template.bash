@@ -2,17 +2,19 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-#/ Usage:
+#/ Usage: Dallin Marshall
 #/ Description:
 #/ Examples:
 #/ Options:
 #/   --help: Display this help message
+
 usage() { grep '^#/' "$0" | cut -c4- ; exit 0 ; }
 expr "$*" : ".*--help" > /dev/null && usage
 
 date_cmd="date \"+%Y-%m-%d %H:%M:%S\""
 
 readonly LOG_FILE="/tmp/$(basename "$0").log"
+
 info()    { echo $(eval "$date_cmd") "[INFO]    $@" | tee -a "$LOG_FILE" >&2 ; }
 warning() { echo $(eval "$date_cmd") "[WARNING] $@" | tee -a "$LOG_FILE" >&2 ; }
 error()   { echo $(eval "$date_cmd") "[ERROR]   $@" | tee -a "$LOG_FILE" >&2 ; }
