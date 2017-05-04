@@ -6,10 +6,4 @@
 [4 Reason We're Having Fun Programming Elixir] (https://teamgaslight.com/blog/4-reasons-were-having-fun-programming-elixir)
 
 
-[CIS194] (http://www.seas.upenn.edu/~cis194/spring13/)
-[Real World Haskell] (http://book.realworldhaskell.org/read/)
-
-
-
-
 
