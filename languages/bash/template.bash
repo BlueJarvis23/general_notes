@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-#/ Usage: Dallin Marshall
+#/ Author:      Dallin Marshall
 #/ Description:
 #/ Examples:
 #/ Options:
@@ -26,6 +26,16 @@ cleanup() {
     # ...
     :
 }
+
+# Commandline Argparse
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        *)
+            fatal "Unknown Commandline Arg: $1"
+            ;;
+    esac
+    shift
+done
 
 if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
     trap cleanup EXIT
