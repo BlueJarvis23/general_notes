@@ -24,6 +24,8 @@ cleanup() {
     # Remove temporary files
     # Restart services
     # ...
+#    rm -rf $TMP_DIR
+    tail -n 500 $LOG_FILE >> "${LOG_FILE}.new" && mv -f "${LOG_FILE}.new" $LOG_FILE    
     :
 }
 
