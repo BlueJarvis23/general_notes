@@ -20,6 +20,8 @@ warning() { echo $(eval "$date_cmd") "[WARNING] $@" | tee -a "$LOG_FILE" >&2 ; }
 error()   { echo $(eval "$date_cmd") "[ERROR]   $@" | tee -a "$LOG_FILE" >&2 ; }
 fatal()   { echo $(eval "$date_cmd") "[FATAL]   $@" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
 
+info_eval()    { info $@ ; eval $@ ; }
+
 cleanup() {
     # Remove temporary files
     # Restart services
