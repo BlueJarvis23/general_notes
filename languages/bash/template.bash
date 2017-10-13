@@ -8,19 +8,21 @@ IFS=$'\n\t'
 #/ Options:
 #/   --help: Display this help message
 
-usage() { grep '^#/' "$0" | cut -c4- ; exit 0 ; }
-expr "$*" : ".*--help" > /dev/null && usage
+usage() { grep $1 "$0" | cut $2 ; exit 0 ; }
+expr "$*" : ".*--help" > /dev/null && usage '^#/' '-c4-'
 
 date_cmd="date \"+%Y-%m-%d %H:%M:%S\""
 
 readonly LOG_FILE="/tmp/$(basename "$0").log"
 
-info()    { echo $(eval "$date_cmd") "[INFO]    $@" | tee -a "$LOG_FILE" >&2 ; }
-warning() { echo $(eval "$date_cmd") "[WARNING] $@" | tee -a "$LOG_FILE" >&2 ; }
-error()   { echo $(eval "$date_cmd") "[ERROR]   $@" | tee -a "$LOG_FILE" >&2 ; }
-fatal()   { echo $(eval "$date_cmd") "[FATAL]   $@" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
+info()    { echo $(eval "$DATE") "[INFO]    ${FUNCNAME[1]}: $@" | tee -a "$LOG_FILE" >&2 ; }
+verbose() { if [[ -n $VERBOSE ]]; then echo $(eval "$DATE") "[VERBOSE] ${FUNCNAME[1]}: $@" | tee -a "$LOG_FILE" >&2 ; fi }
+warning() { echo $(eval "$DATE") "[WARNING] ${FUNCNAME[1]}: $@" | tee -a "$LOG_FILE" >&2 ; }
+error()   { echo $(eval "$DATE") "[ERROR]   ${FUNCNAME[1]}: $@" | tee -a "$LOG_FILE" >&2 ; }
+fatal()   { echo $(eval "$DATE") "[FATAL]   ${FUNCNAME[1]}: $@" | tee -a "$LOG_FILE" >&2 ; exit 1 ; }
 
 info_eval()    { info $@ ; eval $@ ; }
+v_eval()       { verbose $@ ; eval $@ ; }
 
 cleanup() {
     # Remove temporary files
@@ -28,6 +30,7 @@ cleanup() {
     # ...
 #    rm -rf $TMP_DIR
     tail -n 500 $LOG_FILE >> "${LOG_FILE}.new" && mv -f "${LOG_FILE}.new" $LOG_FILE    
+    #/u/dmarshall/bin/user_log -u $USER -s $(basename $0)
     :
 }
 
