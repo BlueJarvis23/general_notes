@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage[titletoc,title]{appendix}
+\usepackage{float}
+
+\begin{document}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{titlepage}
+\begin{center}
+
+~\\[4cm]
+
+\textsc{\Large Microcontroller Hardware and Software}\\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries -- Final Project -- \\ Temperature Controlled Computer Case \\[0.4cm] }
+
+\HRule \\[1.5cm]
+
+% Author
+\noindent
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Computer Engineer:}\\
+Dallin \textsc{Marshall}
+\end{flushleft}
+\end{minipage}%
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Electrical Engineer:} \\
+Alex \textsc{Wallentine}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+% \textcolor{white, black, red, green, blue, cyan, magenta, yellow} {text}
+% \section*{text}
+% \subsection*{text}
+% \subsubsection*{text}
+% \begin{enumerate/itemize}
+% \begin{center} \includegraphics[scale=0.4]{path.png}\end{center}
+% \lstinputlisting[language=Matlab, basicstyle=\footnotesize, firstline=40, lastline=81]{Matlab_Diary.txt}
+%
+%\begin{figure}
+%   \centering
+%       \includegraphics[scale=0.4]{Circuit_Schmatic.png}
+%   \caption{Circuit Schematic}
+%\end{figure}
+%
+%   \begin{figure}[H]
+%       \centering
+%           \begin{minipage}[b]{0.45\linewidth}
+%               \includegraphics[scale=0.3]{./Fan_Data/Data2/AllFansA.png}
+%               \caption{All three Fans 100\%}
+%               \label{fig:minipage1}
+%           \end{minipage}
+%           \quad
+%           \begin{minipage}[b]{0.45\linewidth}
+%               \includegraphics[scale=0.3]{./Fan_Data/Data2/Fans1_2.png}
+%               \caption{Fans 1 and 2 100\%}
+%               \label{fig:minipage2}
+%           \end{minipage}
+%   \end{figure}
+
+
+\thispagestyle{empty}
+\tableofcontents
+%\pagebreak
+\vspace{2cm}
+
+\thispagestyle{empty}
+\listoffigures
+%\listoftables
+\pagebreak
+
+\pagenumbering{arabic}
+\section{Introduction}
+
+\section{Scope}
+
+\section{Design Overview}
+The section is designed to briefly explain the requirements, dependencies, and basic design of the cooling system. Each section 
+will be described in detail later in the paper.
+\subsection{Requirements}
+The design shall achieve the following given requirements.
+    \begin{enumerate}
+        \item item
+    \end{enumerate}
+
+\subsection{Dependencies}
+The only dependencies for the cooling system project are:
+\begin{enumerate}
+    \item item
+\end{enumerate}
+
+\subsection{Theory of Operation}
+
+\subsection{Design Alternatives}
+
+\section{Design Details}
+
+\subsection{Hardware Design}
+
+\subsubsection{Setup and Initialization}
+
+\subsubsection{Wait State}
+
+\subsubsection{Software Development}
+
+\subsection{Data and Analysis}
+
+\section{Testing}
+
+\section{Conclusion}
+
+\pagebreak
+\section*{Appendix}
+\subsection*{Appendix A -- Circuit Schematic}
+\begin{center} \includegraphics[scale=0.6]{Schematic_Vertical.png}\end{center}
+\pagebreak
+
+
+\subsection*{Appendix B -- Python Script -- fan\_parse.py}
+\lstinputlisting[basicstyle=\tiny]{fan_parse.py}
+\pagebreak
+
+
+\subsection*{Appendix C -- Source Code}
+\begin{LARGE}\noindent\texttt{main.c}\end{LARGE}
+\lstinputlisting[language=C, basicstyle=\tiny]{./project_code/main.c}
+
+\end{document}
+
+
