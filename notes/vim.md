@@ -78,7 +78,7 @@ filetype plugin indent on    " required
 
 ## Reformat Text Width
 
-1. :set textwidth=80
+1. :set textwidth=140
 1. v
 1. gq
 

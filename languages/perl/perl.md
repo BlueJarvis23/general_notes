@@ -1,5 +1,9 @@
 
-# perl.md
+# Perl
+
+Make sure to make use of `perldoc` which is the internal/buitin documentation for Perl. To start just type: `perldoc perl`.
+
+Perldoc can also be used to look at perl modules for example `perldoc Class::Tiny`.
 
 ## Manually Installing Modules
 

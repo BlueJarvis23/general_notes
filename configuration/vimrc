@@ -7,6 +7,7 @@ set expandtab
 set hlsearch
 set splitbelow
 set splitright
+set nowrap
 colorscheme elflord
 
 setlocal spelllang=en_us

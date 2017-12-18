@@ -13,8 +13,11 @@ git push origin <branch_name>
 ## git stash
 
 git stash apply "stash@{0}"
-git stash pop "pop@{0}"
+git stash pop "stash@{0}"
 
 
+## amend commit
+
+git commit --amend
 
 
